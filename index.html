@@ -43,3 +43,27 @@
       <StyledButton>Click me!</StyledButton>
     </div>
 
+
+
+
+
+import React, { useState } from 'react';
+import StyledButton from './StyledButton';
+import ComingSoonPage from './ComingSoonPage';
+
+function MyComponent() {
+  const [isComingSoonActive, setIsComingSoonActive] = useState(true);
+
+  if (isComingSoonActive) {
+    return <ComingSoonPage />;
+  }
+
+  return (
+    <div>
+      <h1>Welcome to my website!</h1>
+      <StyledButton>Click me!</StyledButton>
+    </div>
+  );
+}
+
+export default MyComponent;
